@@ -1,4 +1,4 @@
-//WEBP for image================================
+/* //WEBP for image================================
 
 function testWebP(callback) {
 
@@ -25,4 +25,4 @@ $(document).ready(function () {
 		$('.header__burger,.header__menu').toggleClass('active');
 		$('body').toggleClass('lock');
 	});
-});
+}); */
