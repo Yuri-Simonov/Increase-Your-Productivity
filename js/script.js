@@ -1,28 +1,18 @@
-//WEBP for image================================
+document.querySelector('.faq__spoilers').addEventListener('click', (event) => {
+	if (event.target.closest('.faq__spoiler-item')) {
+		event.target.closest('.faq__spoiler-item').classList.toggle('faq__spoiler-item-active');
 
-function testWebP(callback) {
-
-	var webP = new Image();
-	webP.onload = webP.onerror = function () {
-		callback(webP.height == 2);
-	};
-	webP.src = "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA";
-}
-
-testWebP(function (support) {
-
-	if (support == true) {
-		document.querySelector('body').classList.add('webp');
-	} else {
-		document.querySelector('body').classList.add('no-webp');
 	}
-});
+})
 
-//БУРГЕР==================================
+let burger = document.querySelector('.burger');
+let menu = document.querySelector('.section-header')
 
-$(document).ready(function () {
-	$('.header__burger').click(function (event) {
-		$('.header__burger,.header__menu').toggleClass('active');
-		$('body').toggleClass('lock');
-	});
-});
+/* burger.addEventListener('click', () => {
+	menu.classList.toggle('section-header-active');
+}) */
+
+burger.addEventListener('click', (event) => {
+	document.querySelector('.section-header').classList.toggle('section-header-active');
+	document.body.classList.toggle('lock');
+})
